@@ -4,10 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Kevin Huang</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
+
+    <link href="css/mystyle.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -15,22 +18,135 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			...
-		</div>
-    <div class="container">
-      ...
-    </div>
-    <div class="container">
-      ...
-    </div>
-	</nav>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  </body>
+    <script src="js/jquery.fullPage.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#fullpage').fullpage({
+          //Scrolling
+          css3: true,
+          scrollingSpeed: 1000,
+          anchors: ['main', 'about', 'projects', 'contact'],
+          menu: '#menu'
+        });
+      });
+    </script>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#main">Kevin Huang</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul id="menu" class="nav navbar-nav">
+        <li data-menuanchor="main" class="active"><a href="#main">Home <span class="sr-only">(current)</span></a></li>
+        <li data-menuanchor="about"><a href="#about">About</a></li>
+        <li data-menuanchor="projects"><a href="#projects">Projects</a></li>
+        <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div id="fullpage">
+<div class="section" id="screen"></div>
+<div class="section" id="intro">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Hi, my name is Kevin Huang. <br><br>
+      I am a junior at <a href="http://wustl.edu">Washington University</a> double majoring in computer science and mathematics. I'm originally from a suburb of Cleveland, Ohio, but also really enjoy life in St. Louis.<br><br>
+
+      My professional interests include Android app development, educational software, and tools that make life more convenient. <br><br>
+
+      Outside of those, I also enjoy playing basketball, following the NBA, weightlifting, and lion dancing. <br><br>
+    </div>
+  </div>
+
+</div>
+<div class="section" id="listing">
+<div class="panel panel-default">
+  <div class="panel-body">
+
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEyLjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Project 1</h4>
+      Project description...
+    </div>
+  </div>
+
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEyLjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Project 2</h4>
+      Project description...
+    </div>
+  </div>
+
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <img class="media-object" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PGRlZnMvPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjEyLjUiIHk9IjMyIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9nPjwvc3ZnPg==" alt="...">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">Project 3</h4>
+      Project description...
+    </div>
+  </div>
+
+    </div>
+</div>
+</div>
+<div class="section" id="form">
+  <div class="panel panel-default">
+  <div class="panel-body">
+  <h3>Contact me</h3>
+    <form action="/my-handling-form-page" method="post">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+      <div>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" placeholder="Enter your email" />
+      </div>
+      <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" placeholder="Type your message here."></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  </div>
+  <div id="footer"><a href="#main">Home</a> · <a href="#about">About</a> · <a href="#projects">Projects</a> · <a href="#contact">Contact</a> · © 2015 Kevin Huang</div>
+
+</div>
+</div>
+
+</body>
 </html>
